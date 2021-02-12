@@ -1,33 +1,47 @@
-export ZSH=/home/vaino/.oh-my-zsh
+# Path to your oh-my-zsh installation.
+export ZSH="/home/roope/.oh-my-zsh"
 
-# Set theme
-ZSH_THEME="agnoster"
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="risto"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+DISABLE_AUTO_UPDATE="true"
+
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+HIST_STAMPS="yy/mm/dd"
 
 plugins=(
-  git
-  vi-mode
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  python
-  tmux
+    git
+    python
 )
 
-# Oh-My-Zsh integration
 source $ZSH/oh-my-zsh.sh
-#source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# Pywal integration
-#(cat ~/.cache/wal/sequences &)
+# User configuguration
 
-# ALIASES
-alias vim="nvim"
-alias python="python3"
-alias raspi="ssh vaino@88.193.156.189"
+alias bpytop="/home/roope/.local/bin/bpytop"
+alias ping="ping -c 4"
 
+neofetch
 
-# Urxvt perl extensions
-PATH="/home/vaino/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/vaino/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/vaino/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/vaino/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/vaino/perl5"; export PERL_MM_OPT;
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/roope/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/roope/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/roope/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/roope/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
