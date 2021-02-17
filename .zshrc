@@ -33,7 +33,6 @@ alias pip="pip3"
 alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
 
 neofetch
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/roope/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"

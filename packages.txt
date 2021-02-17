@@ -5,6 +5,4 @@ keepassxc
 lm-sensors
 ncdu
 neofetch
-python3
-python3-pip
 zsh
