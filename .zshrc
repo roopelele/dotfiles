@@ -30,6 +30,7 @@ alias bpytop="/home/roope/.local/bin/bpytop"
 alias ping="ping -c 4"
 alias python="python3"
 alias pip="pip3"
+alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
 
 neofetch
 
