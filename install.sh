@@ -11,16 +11,18 @@ while true; do
                 pip3 install -r pip-packages.txt
                 break;;
         [Nn]* ) break;;
-        * )     exho "Please answer [y]es or [n]o.";;
+        * )     echo "Please answer [y]es or [n]o.";;
     esac
 done
 
 while true; do
-    read -p "Do you want to install oh-my-zsh y/n " yn
+    read -p "Do you want to install oh-my-zsh? [y/n]: " yn
     case $yn in
-        [Yy]* ) rm -rf ~/.oh-my-zsh && sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"         break;;
+        [Yy]* ) rm -rf ~/.oh-my-zsh
+                sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+                break;;
         [Nn]* ) break;;
-        * ) echo "Please answer yes or no.";;
+        * )     echo "Please answer yes or no.";;
     esac
 done
 
@@ -33,7 +35,7 @@ while true; do
                 cat $dotfiles_dir/anaconda.txt >> $dotfiles_dir/.zshrc
                 break;;
         [Nn]* ) break;;
-        * )     exho "Please answer [y]es or [n]o.";;
+        * )     echo "Please answer [y]es or [n]o.";;
     esac
 done
 
