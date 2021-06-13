@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/home/roope/.oh-my-zsh"
+export ZSH="HOME_DIR/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="risto"
@@ -26,7 +26,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuguration
 
-alias bpytop="/home/roope/.local/bin/bpytop"
+alias bpytop="HOME_DIR/.local/bin/bpytop"
 alias ping="ping -c 4"
 alias python="python3"
 alias pip="pip3"
