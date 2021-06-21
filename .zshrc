@@ -20,6 +20,7 @@ HIST_STAMPS="yy/mm/dd"
 plugins=(
     git
     python
+    zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -23,6 +23,7 @@ while true; do
     case $yn in
         [Yy]* ) rm -rf ~/.oh-my-zsh
                 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+                git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
                 break;;
         [Nn]* ) break;;
         * )     echo "Please answer yes or no.";;
