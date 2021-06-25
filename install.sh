@@ -2,7 +2,10 @@
 
 dotfiles_dir=$PWD
 
-cat packages.txt | xargs sudo apt install -y
+for line in $(cat packages.txt)
+do
+    sudo apt install $line -y
+done
 
 rm -rf ~/.zshrc
 cp $dotfiles_dir/.nanorc ~
