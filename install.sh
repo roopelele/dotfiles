@@ -19,14 +19,14 @@ while true; do
 done
 
 while true; do
-    read -p "Do you want to install oh-my-zsh? [y/n]: " yn
+    read -p "Install oh-my-zsh? [y/n]: " yn
     case $yn in
         [Yy]* ) rm -rf ~/.oh-my-zsh
-                sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-                git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+                sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+                git clone "https://github.com/zsh-users/zsh-autosuggestions" ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
                 break;;
         [Nn]* ) break;;
-        * )     echo "Please answer yes or no.";;
+        * )     echo "Please answer [y]es or [n]o.";;
     esac
 done
 
@@ -48,5 +48,9 @@ done
 # Set home directory in .zshrc
 sed -i "s#HOME_DIR#$HOME#" ~/.zshrc
 
-echo "Install finished"
+echo "Changing shell to zsh"
+chsh -s /usr/bin/zsh
+
+echo "Install finished. Please log out to start using zsh"
+
 exit 0
