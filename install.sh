@@ -2,6 +2,24 @@
 
 dotfiles_dir=$PWD
 
+# Check arguments
+for arg in "$@"
+do
+    case $arg in
+        -h | --help )       echo "A simple script to automate setting up debian/ubuntu environment"
+                            echo "VALID ARGUMENTS:"
+                            echo "-d, --desktop:    Install desktop only packages"
+                            echo "-h, --help:       show this info"
+                            exit 0
+                            ;;
+        -d | --desktop )    for line in $(cat desktop-packages.txt)
+                            do
+                                sudo apt install $line -y
+                            done
+                            ;;
+    esac
+done
+
 for line in $(cat packages.txt)
 do
     sudo apt install $line -y

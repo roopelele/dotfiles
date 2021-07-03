@@ -1,8 +1,6 @@
 curl
 wget
 git
-gnome-tweaks
-keepassxc
 lm-sensors
 ncdu
 neofetch
