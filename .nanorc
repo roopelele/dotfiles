@@ -72,6 +72,9 @@ set functioncolor green
 ##
 ##   include "/path/to/syntax_file.nanorc"
 
+syntax "default"
+color ,green "[[:space:]]+$"
+
 ## To include all existing syntax definitions, you can do:
 include "/usr/share/nano/*.nanorc"
 
