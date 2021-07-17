@@ -69,6 +69,13 @@ done
 # Set home directory in .zshrc
 sed -i "s#HOME_DIR#$HOME#" ~/.zshrc
 
+# Set git global options
+read -p "Enter git username: " name
+read -p "Enter git email " email
+git config --global user.name $name
+git config --global user.email $email
+git config --global pull.rebase true
+
 echo "Changing shell to zsh"
 chsh -s /usr/bin/zsh
 
